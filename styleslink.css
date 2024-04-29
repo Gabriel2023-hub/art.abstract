@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px; /* Abstand zwischen den Zeilen */
+}
+
+.image {
+    text-align: center;
+    padding: 150px; /* Innenabstand um die Bilder */
+}
+
+.image img {
+    width:400px; /* Breite der Bilder */
+    height: auto; /* Automatische Höhe */
+    border: 2px solid #ddd; /* Rahmen um das Bild */
+    border-radius: 8px; /* Abgerundete Ecken */
+}
+
+.image p {
+    font-size: 20px; /* Schriftgröße der Beschreibung */
+    margin-top: 8px; /* Abstand über der Beschreibung */
+}
+
+ /* Stil für den Link */
+ .back-link {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    transition: background-color 0.3s ease; /* Übergangseffekt für Hintergrundfarbe */
+    border-radius: 20px; /*Abgerundete Ecken*/
+}
+
+/* Stil für das Bild im Link */
+.back-link img {
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+}
+
+/* Hover-Effekt: Ändert die Hintergrundfarbe beim Überfahren mit der Maus */
+.back-link:hover {
+    background-color: lightblue; /* Neue Hintergrundfarbe beim Überfahren */
+}
+
+/* Stil für das rote "Achtung!!!" */
+.warning {
+    color: red; /* Setzt die Textfarbe auf Rot */
+    font-weight: bold; /* Macht den Text fett */
+}

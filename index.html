@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderne abstrakte Gemälde: Entdecke Kunstvolles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img class="header-image" src="img/background5.1.jpg">
+    
+    <div class="container">
+        <div class="container" id="logo">
+            <img src="img/logo_dama1.1.png" alt="Logo" style="width: 130px; height: auto;">
+        </div>
+
+        <!-- Navigationsbereich für "Home", "Wandbilder" und andere Links -->
+        <div class="navigation-container">
+            <header class="navigation" id="navbar">
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="portofolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            <div class="animation start-home"></div>
+            </header>
+        </div>
+            <div class="scrollbar-top" id="scrollbarTop">
+            </div>        
+    </div>
+    
+    <!-- <h1 class="headline">Entdecken Sie <span class="yellow">abstrakte Themen in Ihrer Nähe</span> auf dieser Website</h1> -->
+    <h2>Anfahrt</h2>  
+    <div class="description-section">
+        <div class="half-width">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laborum, molestias porro ipsam accusantium culpa optio non vitae cumque magni. Aut id inventore corrupti qui, nemo reiciendis! Distinctio, pariatur accusantium!
+        </div>
+        <iframe class="half-width" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d349183.69799563964!2d14.94245955271088!3d46.86341883494981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476fba0f7a79b985%3A0x4d9e9a8d44aeb35d!2sHengsberg%20Bahnhof!5e0!3m2!1sde!2sde!4v1712676004569!5m2!1sde!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <h2>Video</h2>
+    <div class="description-section">
+        <div class="video-container">
+            <iframe 
+              class="youtube"
+              src="https://www.youtube.com/embed/Q6CgtC-m7EU?si=zmrJ8M_Fy_bwjeRH" 
+              title="YouTube video player" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+              allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="half-width">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laborum, molestias porro ipsam accusantium culpa optio non vitae cumque magni. Aut id inventore corrupti qui, nemo reiciendis! Distinctio, pariatur accusantium!
+        </div>
+    </div>
+
+    <script>
+        window.onscroll = function() {
+        scrollFunction();
+        };
+
+        function scrollFunction() {
+            var navbar = document.getElementById("navbar");
+            var logo = document.getElementById("logo");
+            var scrollbarTop = document.getElementById("scrollbarTop");
+
+            // Überprüfe die vertikale Scrollposition
+            if (window.pageYOffset > 80) {
+                // Füge der Navigationsleiste und dem Logo die Klasse 'active' hinzu
+                navbar.classList.add("active");
+                logo.classList.add("active");
+
+                // Einblenden der oberen Leiste (scrollbarTop)
+                scrollbarTop.style.display = "block";
+            } else {
+                // Entferne die Klasse 'active' von der Navigationsleiste und dem Logo
+                navbar.classList.remove("active");
+                logo.classList.remove("active");
+
+                // Ausblenden der oberen Leiste (scrollbarTop)
+                scrollbarTop.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
