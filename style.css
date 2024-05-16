@@ -1,106 +1,111 @@
-navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 1000; /* Stellen Sie sicher, dass die Navbar über anderen Inhalten liegt */
-  border-bottom: 1px solid #ccc; /* Fügt eine Trennlinie am unteren Rand der Navbar hinzu */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Fügt einen Schatten zur Navbar hinzu */
-  transition: top 0.3s; /* Fügt einen Übergangseffekt hinzu, wenn die Position geändert wird */
-}
-
+/* Container-Stil für die Navigation */
 .navigation-container {
-  width: 100%; /* Volle Breite des Viewports */
-  max-width: 1000px; /* Maximale Breite des Containers */
-  margin: 15px auto; /* Margin oben, automatisch horizontal zentriert */
+  margin: 15px auto;
 }
 
+/* Stil für die Navigationsleiste */
 .navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 100%; /*da kann man die länge von leiste-navigation vergrößen */
+  width: 63%; /* link_leiste verlängert*/
   max-width: 1000px;
-  height: 70px; /*die breite von hintergrund leiste*/
+  height: 70px;
+  right: 70px;
   background-color: #34495e;
   border-radius: 100px;
   font-size: 0;
-  z-index: 1000; /*Höhere Z-Index-Ebene für die Navigation- e pt. ca 'h1' schrift sa ramana sub 'navigation' wen nach unten schrollen*/ 
+  z-index: 1000;
 }
 
+/* Aktiver Zustand der Navigationsleiste */
 .navigation.active {
   background-color: black;
 }
 
-.navigation a {
-  line-height: 70px; /*da wird die leiste_schrift positionieren*/
-  height: 100%;
-  font-size: 25px; /*da wird die schriftgröße geändert von navigationsleiste*/
+/* Stil für die Navigationslinks */
+.navigation ul a {
+  line-height: 100px; /* Vertikale Ausrichtung der Schrift in der Navigationsleiste */
+  font-size: 25px;
   display: inline-block;
   position: relative;
   z-index: 1;
   text-decoration: none;
   text-transform: uppercase;
-  text-align: center;
   color: white;
   cursor: pointer;
-} 
 
-.navigation .animation {
-  position: absolute;
-  height: 100%;
-  top: 0;
-  z-index: 0;
-  transition: all .5s ease 0s;
-  border-radius: 30px;
+  height: 100px;
+  right: 0px;
+  left: 40px; /* link_schrift verschieben*/
 }
 
-a:nth-child(1) {
-  width: 120px;
+/* da es wird die hintergrund_farbe von links manipuliert */
+nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 10px;
 }
-a:nth-child(2) {
-  width: 90px;
+
+/* Breiten der a-Elemente */
+nav ul a:nth-child(1) {
+  width: 130px;
 }
-a:nth-child(3) {
-  width: 100px;
-}
-a:nth-child(4) {
-  width: 150px;
-}
-a:nth-child(5) {
+nav ul a:nth-child(2) {
   width: 170px;
 }
-navigation .start-home, a:nth-child(1):hover~.animation {
-  width: 160px;
-  left: 0;
-  background-color: #1abc9c;  
+nav ul a:nth-child(3) {
+  width: 130px;
 }
-navigation .start-about, a:nth-child(2):hover~.animation {
+nav ul a:nth-child(4) {
+  width: 210px;
+}
+nav ul a:nth-child(5) {
   width: 180px;
-  left: 170px;
+}
+
+/* Animationseffekte beim Hover */
+nav .start-home,
+nav ul a:nth-child(1):hover ~ .animation {
+  width: 110px;
+  left: 60px;
+  background-color: #1abc9c;
+}
+
+nav .start-about,
+nav ul a:nth-child(2):hover ~ .animation {
+  width: 140px;
+  left: 180px;
   background-color: #e74c3c;
 }
-navigation .start-blog, a:nth-child(3):hover~.animation {
-  width: 190px;
+
+nav .start-blog,
+nav ul a:nth-child(3):hover ~ .animation {
+  width: 120px;
   left: 350px;
   background-color: #3498db;
 }
-navigation .start-portefolio, a:nth-child(4):hover~.animation {
-  width: 185px;
-  left: 570px;
+
+nav .start-portfolio,
+nav ul a:nth-child(4):hover ~ .animation {
+  width: 160px;
+  left: 500px;
   background-color: #9b59b6;
 }
-navigation .start-contact, a:nth-child(5):hover~.animation {
-  width: 170px;
-  left: 830px; /*da kann man die hintergrund von schrift leiste nach rechtz verschiben*/
+
+nav .start-contact,
+nav ul a:nth-child(5):hover ~ .animation {
+  width: 160px;
+  left: 700px;
   background-color: #e67e22;
 }
 
 body {
   font-size: 12px;
-  /* font-family: sans-serif; */
-  /* background: #2c3e50; */
 }
 
 .header-image {
@@ -108,7 +113,6 @@ body {
   width: 100%;
   object-fit: cover ;
   filter: brightness(0.9);
-  margin-top: 50px;
 }
 
 .container {
@@ -120,8 +124,7 @@ body {
 }
 
 .container.active {
-  position: fixed;
-  position: absolute;
+  position: fixed; /*das ist für logo*/  
 }
 
 .scrollbar-top {
@@ -139,11 +142,18 @@ body {
   height: 300px;
   padding: 30px 100px;
   display: flex; /* da grenzt die text und der maps*/
-  gap: 50px; /*die abstand zwischen text & maps*/
+  gap: 50px; /*die abstand zwischen text & maps*/  
 }
+
+#description-section{
+    flex-wrap: wrap-reverse;
+  }
 
 .half-width {
   width: 50%;
+  text-align: justify;
+  line-height: 150%;
+  font-size: 20px;
 }
 
 h2 {
@@ -157,6 +167,7 @@ h2 {
 
 .video-container {
   width: 50%;
+  border: 15px solid black;
 }
 
 .youtube {
@@ -164,24 +175,94 @@ h2 {
   height: calc(56.25vw * 0.4); /*diese zahl 56.25 ist so gerechnet 100*9/16=56.25 */
 }
 
-@media (max-width: 750px) {  
-  .description-section {
-    flex-direction: column;
-    align-items: center;
-    height: unset; /*höher entfernen- keine elemente hat feste parameter mehr - 
-                    die conteiner sind jezt untereinander schön positioniert 
-                    wenn die seite klein gemacht wird */
-  }
-
-  .half-width {
-    width: unset; /*die breite wieder entfernen wen auch auf der handy modus die seite ausehen soll*/
-  }
-
-  .video-container {
-    width: unset; /*die breite nicht mehr gesetzt ist*/
-    display: flex; /*um die elemente frei zu bewegen*/
-    justify-content: center; /*die elemente soll in der mitte conteiner sein*/
-  }
+#logo img {
+  width: 130px; /* Breite des Logos */
+  height: auto; /* Automatische Anpassung der Höhe */
 }
 
+#toggle_button{
+  display: none;
+}
 
+label[for="toggle_button"]{
+  display: none;
+}
+
+/*die icons positionieren in leiste oben*/
+label[for="toggle_button"] span{
+  font-size: 40px;
+}
+
+@media (max-width: 750px) {  
+    .description-section {
+      flex-direction: column;
+      align-items: center;
+      height: unset; /*höher entfernen- keine elemente hat feste parameter mehr - 
+                      die conteiner sind jezt untereinander schön positioniert 
+                      wenn die seite klein gemacht wird */
+    }
+
+    .half-width {
+      width: unset; 
+      /*die breite wieder entfernen wenn auch auf der handy modus die seite ausehen soll*/
+    }
+
+    .video-container {
+      width: unset; /*die breite nicht mehr gesetzt ist*/
+      display: flex; /*um die elemente frei zu bewegen*/
+      justify-content: center; /*die elemente soll in der mitte conteiner sein*/
+    }
+
+    .navigation {
+    width: unset; 
+    }
+
+    nav{
+      position: fixed; /*pentru ca textu sau img sa nu fie nach unten verschibt, cand e deschis pe handy das icons von oben leiste*/
+      top: 0;
+      left: 0;
+      background: var(--secondary-color);
+      padding: 15px;
+      border-radius: 0 0 25px 0;
+    }
+    
+    nav .start-home{
+      width: unset;
+      background: var(--secondary-color);
+    }
+
+    nav ul{
+      display: none;
+      flex-direction: column; 
+      padding-left: 0.0px;
+      background: black;
+      border-radius: 0px 20px 20px 20px; 
+    }
+    nav ul a:hover{
+      text-decoration: none;
+      margin: 20px 20px; /*Abstand zwischen den Icons*/
+      font-size: 30px;  /* Größe der Symbole */
+      transition: transform 0.5s ease, box-shadow 0.5s ease; /* Übergangseffekte */
+      background-color: #f8f9fa; /* Hintergrundfarbe ändern */
+      color: #333; /* Textfarbe ändern */
+      border-radius: 8px; /* Abgerundete Ecken für den Hover-Effekt */     
+    }
+
+    #toggle_button:checked ~ ul{
+      display: flex;
+    }
+    label[for="toggle_button"]{
+      display: block;     
+    }
+
+    .container{
+      top: 0px; /* Abstand zum oberen Rand 'Logo' */
+      left: auto; /* Automatische Positionierung 'Logo' */
+    }
+    #logo img {
+      width: 80px; /* Neue Breite des Logos bei kleineren Bildschirmen */
+    }
+    .scrollbar-top{
+      height: 85px;
+    }
+}
