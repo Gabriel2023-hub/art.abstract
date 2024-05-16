@@ -9,24 +9,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- link für die icons mit die 3 linie, oben in der leiste -->
 </head>
 <body>
     <img class="header-image" src="img/background5.1.jpg">
-    
-    <div class="container">
-        <div class="container" id="logo">
-            <img src="img/logo_dama1.1.png" alt="Logo" style="width: 130px; height: auto;">
-        </div>
+
+        <div class="container">
+            <div class="container" id="logo">
+                <img src="img/logo_dama1.1.png" alt="Logo">
+            </div>    
+
 
         <!-- Navigationsbereich für "Home", "Wandbilder" und andere Links -->
         <div class="navigation-container">
             <header class="navigation" id="navbar">
-                <a href="home.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="blog.html">Blog</a>
-                <a href="portofolio.html">Portfolio</a>
-                <a href="contact.html">Contact</a>
-            <div class="animation start-home"></div>
+                <nav>
+                    <input type="checkbox" id="toggle_button">
+                    <label for="toggle_button">
+                        <span class="material-symbols-rounded">menu</span>
+                    </label> 
+                    <ul>  
+                        <a href="home.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="portofolio.html">Portfolio</a>
+                        <a href="contact.html">Contact</a>
+                        <div class="animation start-home"></div>
+                    </ul>
+                </nav>        
             </header>
         </div>
             <div class="scrollbar-top" id="scrollbarTop">
@@ -37,7 +49,7 @@
     <h2>Anfahrt</h2>  
     <div class="description-section">
         <div class="half-width">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laborum, molestias porro ipsam accusantium culpa optio non vitae cumque magni. Aut id inventore corrupti qui, nemo reiciendis! Distinctio, pariatur accusantium!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque explicabo magni id veniam aspernatur rerum officiis reiciendis dolores. Culpa enim porro, temporibus iusto mollitia qui labore quaerat ullam. Dolorem sint non dignissimos at illum impedit asperiores libero cumque porro tenetur quia dolores explicabo necessitatibus, minus distinctio aspernatur tempora et, mollitia nam error sunt facilis reprehenderit nihil. Cum dolores voluptatibus quis facere magnam laborum, sint vero, earum repudiandae consectetur sunt dolor.
         </div>
         <iframe class="half-width" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d349183.69799563964!2d14.94245955271088!3d46.86341883494981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476fba0f7a79b985%3A0x4d9e9a8d44aeb35d!2sHengsberg%20Bahnhof!5e0!3m2!1sde!2sde!4v1712676004569!5m2!1sde!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
@@ -56,7 +68,7 @@
         </div>
 
         <div class="half-width">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laborum, molestias porro ipsam accusantium culpa optio non vitae cumque magni. Aut id inventore corrupti qui, nemo reiciendis! Distinctio, pariatur accusantium!
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, delectus! Blanditiis, nesciunt quo? Tempora, laudantium ab. Quae tempore atque unde temporibus fugiat molestiae, saepe magni ex error obcaecati illum sapiente libero, mollitia quis at. Cumque odit modi exercitationem laborum, asperiores magni? Et numquam officia rem ipsam alias, inventore qui perferendis.
         </div>
     </div>
 
@@ -87,7 +99,7 @@
                 scrollbarTop.style.display = "block";
             }
         }
-    </script>
+    </script>  
 
 </body>
 </html>
