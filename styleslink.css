@@ -64,3 +64,23 @@ h1 {
     color: red; /* Setzt die Textfarbe auf Rot */
     font-weight: bold; /* Macht den Text fett */
 }
+
+
+/* Media Query für kleinere Bildschirme (maximale Breite von 600px) */
+@media (max-width: 750px) {
+    /* Ändere das Layout in eine einzelne Spalte */
+    .image-container {
+        align-items: stretch; /* Strecke die Elemente auf die volle Breite */
+    }
+
+    /* Ändere die Breite der Bilder auf 100% */
+    .image {
+        width: 100%;
+    }
+
+    .row{
+        /* height: unset; */
+        flex-wrap: wrap;
+    }
+} 
+
